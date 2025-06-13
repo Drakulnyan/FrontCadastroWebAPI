@@ -1,0 +1,93 @@
+.sidebar {
+    min-width: 220px;
+    max-width: 220px;
+    background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    box-shadow: 2px 0 16px rgba(44,62,80,0.07);
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transition: min-width 0.2s, max-width 0.2s;
+}
+
+.sidebar-fechado {
+    min-width: 60px;
+    max-width: 60px;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 0 2rem 1rem;
+    outline: none;
+    transition: color 0.2s;
+}
+
+.sidebar-fechado .sidebar-toggle {
+    margin-left: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #222;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, padding-left 0.2s, font-size 0.2s;
+    border-left: 4px solid transparent;
+    border-radius: 8px 0 0 8px;
+    margin: 0.2rem 0;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+    .sidebar a.active,
+    .sidebar a:hover {
+        background: #74ebd5; /* azul claro translúcido */
+        color: #fff;
+        border-left: 4px solid #74ebd5;
+        padding-left: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        margin: 0;
+    }
+
+.sidebar-fechado .sidebar a {
+    padding: 1rem 0.5rem;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+    .sidebar-fechado .sidebar a.active,
+    .sidebar-fechado .sidebar a:hover {
+        background: #74ebd5;
+        color: #fff;
+        border-left: 4px solid #74ebd5;
+        padding-left: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 8px;
+        /* Garante que o fundo branco não ultrapasse o menu fechado */
+        margin: 0;
+    }

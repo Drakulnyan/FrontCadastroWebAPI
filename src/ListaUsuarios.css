@@ -1,0 +1,189 @@
+.usuarios-tabela-container {
+    background: rgba(172, 182, 229, 0.13); /* tom suave do gradiente */
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+    padding: 2rem 2rem 1rem 2rem;
+    margin: 2rem auto;
+    max-width: 1400px;
+    min-width: 1200px;
+    border: 1.5px solid #74ebd5;
+}
+
+.usuarios-tabela-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.usuarios-tabela-busca {
+    position: relative;
+    width: 260px;
+}
+
+    .usuarios-tabela-busca input {
+        width: 100%;
+        padding: 0.7rem 2.2rem 0.7rem 1rem;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 7px;
+        font-size: 1rem;
+        background: #f8fafd;
+    }
+
+.icon-busca {
+    position: absolute;
+    right: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.usuarios-tabela-scroll {
+    height: 400px; /* Altura fixa para a tabela */
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+.usuarios-tabela {
+    width: 100%;
+    min-width: 1200px; /* Garante largura mínima */
+    table-layout: fixed; /* Mantém as colunas com largura fixa */
+    border-collapse: collapse;
+}
+
+    .usuarios-tabela th, .usuarios-tabela td {
+        padding: 0.9rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+        background: rgba(255,255,255,0.85);
+    }
+
+    .usuarios-tabela th {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: #74ebd5;
+        font-weight: 600;
+        color: #222;
+        box-shadow: 0 2px 2px -2px #e0e0e0;
+        border-bottom: 2px solid #74ebd5;
+        /* Bordas arredondadas só nos cantos superiores */
+    }
+
+    .usuarios-tabela tbody tr:hover {
+        background: rgba(172, 182, 229, 0.18);
+        transition: background 0.2s
+    }
+
+
+    .usuarios-tabela th:first-child {
+        border-top-left-radius: 12px;
+    }
+
+    .usuarios-tabela th:last-child {
+        border-top-right-radius: 12px;
+    }
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: #555;
+    transition: color 0.2s, background 0.2s;
+    border-radius: 5px;
+    padding: 0.4rem;
+}
+
+    .icon-btn:last-child {
+        margin-right: 0;
+    }
+
+    .icon-btn:hover {
+        background: #74ebd5;
+        color: #fff;
+    }
+
+.usuarios-tabela-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.usuarios-tabela th:nth-child(2), /* Nome */
+.usuarios-tabela td:nth-child(2) {
+    min-width: 140px;
+    max-width: 200px;
+    word-break: break-word;
+}
+
+.usuarios-tabela th:nth-child(3), /* Email */
+.usuarios-tabela td:nth-child(3) {
+    min-width: 180px;
+    max-width: 220px;
+    word-break: break-word;
+}
+
+.usuarios-tabela th:nth-child(6), /* Endereço */
+.usuarios-tabela td:nth-child(6) {
+    min-width: 140px;
+    max-width: 200px;
+    word-break: break-word;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(116, 235, 213, 0.18); /* tom do gradiente com transparência */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    padding: 2.5rem 2rem 2rem 2rem;
+    min-width: 380px;
+    max-width: 95vw;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+    border: 2px solid #74ebd5;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: modalShow 0.2s;
+}
+
+@keyframes modalShow {
+    from {
+        transform: translateY(40px) scale(0.98);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #0077b6;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+

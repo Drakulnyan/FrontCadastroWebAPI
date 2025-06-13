@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(120deg, #74ebd5 0%, #ACB6E5 100%);
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    .header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #222;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    .header p {
+        color: #555;
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+    }
+
+.form-card {
+    background: #fff;
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.10);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    min-width: 340px;
+    max-width: 400px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.1rem;
+    font-weight: 500;
+}
+
+.form-input {
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 7px;
+    font-size: 1rem;
+    transition: border 0.2s;
+    background: #f8fafd;
+}
+
+    .form-input:focus {
+        border: 1.5px solid #74ebd5;
+        outline: none;
+        background: #fff;
+    }
+
+.form-button {
+    background: linear-gradient(90deg, #74ebd5 0%, #ACB6E5 100%);
+    color: #222;
+    border: none;
+    border-radius: 7px;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    transition: background 0.2s, color 0.2s;
+}
+
+    .form-button:hover {
+        background: linear-gradient(90deg, #ACB6E5 0%, #74ebd5 100%);
+        color: #111;
+    }
