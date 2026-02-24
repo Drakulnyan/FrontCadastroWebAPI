@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { apiRequest } from "./api"; // Importe a função de requisição genérica
 
 type UsuarioDto = {
     nome: string;
@@ -33,8 +34,23 @@ const FormularioUsuario: React.FC<FormularioUsuarioProps> = ({
     );
 
     useEffect(() => {
-        if (usuarioEditavel) setUsuario(usuarioEditavel);
-    }, [usuarioEditavel]);
+        async function fetchUsuario() {
+            if (usuarioEditavel?.id)
+                try {
+                    const usuarioData = await apiRequest(`/usuarios/${usuarioEditavel.id}`, {
+                        method: "GET",
+                    });
+                    setUsuario(usuarioData);
+                } catch (err: unknown) {
+                    if (err instanceof Error) {
+                        alert("Erro ao carregar usuário: " + err.message);
+                    } else {
+                        alert("Erro desconhecido ao carregar usuário.");
+                    }
+                }
+        }
+        fetchUsuario();
+    },[usuarioEditavel])
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -46,18 +62,15 @@ const FormularioUsuario: React.FC<FormularioUsuarioProps> = ({
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const url = usuarioEditavel?.id
-            ? `http://localhost:5180/api/usuarios/${usuarioEditavel.id}`
-            : "http://localhost:5180/api/usuarios";
+        const endpoint = usuarioEditavel?.id
+            ? `/usuarios/${usuarioEditavel.id}`
+            : "/usuarios";
         const method = usuarioEditavel?.id ? "PUT" : "POST";
-        console.log("Enviando dados do usuário:", usuario);
-        // Substitua pela URL da sua API
-        const response = await fetch(url, {
-            method,
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(usuario),
-        });
-        if (response.ok) {
+        try {
+            await apiRequest(endpoint, {
+                method,
+                data: usuario,
+            });
             alert(usuarioEditavel ? "Usuário atualizado com sucesso!" : "Usuário cadastrado com sucesso!");
             if (onSalvar) onSalvar();
             setUsuario({
@@ -68,10 +81,16 @@ const FormularioUsuario: React.FC<FormularioUsuarioProps> = ({
                 endereco: "",
                 dataNascimento: "",
             });
-        } else {
-            alert("Erro ao cadastrar usuário.");
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                alert("Erro ao cadastrar usuário: " + err.message);
+            } else {
+                alert("Erro desconhecido ao cadastrar usuário.");
+            }
         }
+
     };
+
 
     return (
         <form onSubmit={handleSubmit}>

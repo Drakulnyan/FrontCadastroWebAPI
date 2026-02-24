@@ -1,6 +1,7 @@
 ﻿import React, { useEffect, useState } from "react";
 import { FaTrash, FaEdit, FaSearch } from "react-icons/fa";
 import FormularioUsuario from "./FormularioUsuario";
+import { apiRequest } from "./api"; 
 import "./ListaUsuarios.css";
 
 type Usuario = {
@@ -18,23 +19,38 @@ const ListaUsuarios: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [busca, setBusca] = useState("");
     const [usuarioEdit, setUsuarioEdit] = useState<Usuario | null>(null);
+    const [erro, setErro] = useState<string>("")
 
     useEffect(() => {
-        fetch("http://localhost:5180/api/usuarios")
-            .then(res => res.json())
-            .then(data => {
+        async function fetchUsuarios() {
+            try {
+                const data = await apiRequest("/usuarios", { method: "GET" });
                 setUsuarios(data);
                 setLoading(false);
-            });
+            } catch (err: unknown) {
+                if (err instanceof Error) setErro (err.message);
+                else setErro("Erro desconhecido ao carregar usuários.");    
+            }
+        }
+        fetchUsuarios();
     }, []);
 
-    const atualizarLista = () => {
-        fetch("http://localhost:5180/api/usuarios")
-            .then(res => res.json())
-            .then(data => {
-                setUsuarios(data);
-                setLoading(false);
-            });
+    const atualizarLista = async () => {
+        setLoading(true);
+        try {
+            const data = await apiRequest("/usuarios", { method: "GET" });
+            setUsuarios(data);
+            setLoading(false);
+        } catch (err: unknown) {
+            if (err instanceof Error) setErro(err.message);
+            else setErro("Erro ao atualizar lista de usuários.");
+        }
+        //fetch("http://localhost:5180/api/usuarios")
+        //    .then(res => res.json())
+        //    .then(data => {
+        //        setUsuarios(data);
+        //        setLoading(false);
+        //    });
     };
 
     const usuariosFiltrados = usuarios.filter(u =>
@@ -44,17 +60,24 @@ const ListaUsuarios: React.FC = () => {
         u.endereco.toLowerCase().includes(busca.toLowerCase())
     );
 
-    const handleDelete = (id: number) => {
+    const handleDelete = async (id: number) => {
         if (window.confirm("Deseja realmente deletar este usuário?")) {
-            fetch(`http://localhost:5180/api/usuarios/${id}`, {
-                method: "DELETE"
-            }).then(res => {
-                if (res.ok) {
-                    setUsuarios(usuarios.filter(u => u.id !== id));
-                } else {
-                    alert("Erro ao deletar usuário.");
-                }
-            });
+            try {
+                await apiRequest(`/usuarios/${id}`, { method: "DELETE" });
+                setUsuarios(usuarios.filter(u => u.id !== id));
+            } catch (err: unknown) {
+                if (err instanceof Error) alert("Erro ao deletar usuário: " + err.message);
+                else alert("Erro desconhecido ao deletar usuário.");
+            }
+            //fetch(`http://localhost:5180/api/usuarios/${id}`, {
+            //    method: "DELETE"
+            //}).then(res => {
+            //    if (res.ok) {
+            //        setUsuarios(usuarios.filter(u => u.id !== id));
+            //    } else {
+            //        alert("Erro ao deletar usuário.");
+            //    }
+            //});
         }
     };
 
