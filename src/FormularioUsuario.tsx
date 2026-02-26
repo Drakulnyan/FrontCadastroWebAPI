@@ -8,6 +8,7 @@ type UsuarioDto = {
     telefone: string;
     endereco: string;
     dataNascimento: string; // ISO string para compatibilidade com input type="date"
+    senha : string
 };
 
 type FormularioUsuarioProps = {
@@ -30,6 +31,7 @@ const FormularioUsuario: React.FC<FormularioUsuarioProps> = ({
             telefone: "",
             endereco: "",
             dataNascimento: "",
+            senha: "",
         }
     );
 
@@ -80,6 +82,7 @@ const FormularioUsuario: React.FC<FormularioUsuarioProps> = ({
                 telefone: "",
                 endereco: "",
                 dataNascimento: "",
+                senha: "",
             });
         } catch (err: unknown) {
             if (err instanceof Error) {
@@ -167,6 +170,20 @@ const FormularioUsuario: React.FC<FormularioUsuarioProps> = ({
                     onChange={handleChange}
                     type="date"
                     required
+                />
+            </div>
+            <div className="form-group">
+                <label className="form-label" htmlFor="senha">Senha</label>
+                <input
+                    id="senha"
+                    name="senha"
+                    className="form-input"
+                    value={usuario.senha}
+                    onChange={handleChange}
+                    placeholder="Digite uma senha de 6 números"
+                    type="password"
+                    required
+                    disabled={!!usuarioEditavel}
                 />
             </div>
             <button className="form-button" type="submit">
