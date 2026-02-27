@@ -38,6 +38,8 @@ const Login: React.FC = () => {
 
     };
 
+
+
     return (
         <Box
             sx={{
@@ -88,22 +90,7 @@ const Login: React.FC = () => {
                         </Alert>
                     )}
 
-                    {/*{sucesso && (*/}
-                    {/*    <>*/}
-                    {/*        <Alert severity="success" sx={{ mt: 2 }}>*/}
-                    {/*            Login realizado com sucesso! O token JWT foi armazenado em um cookie.*/}
-                    {/*        </Alert>*/}
-                    {/*        <Button*/}
-                    {/*            variant="outlined"*/}
-                    {/*            color="secondary"*/}
-                    {/*            fullWidth*/}
-                    {/*            sx={{ mt: 2 }}*/}
-                    {/*            onClick={handleLogout}*/}
-                    {/*        >*/}
-                    {/*            Sair*/}
-                    {/*        </Button>*/}
-                    {/*    </>*/}
-                    {/*)}*/}
+                    
                 </Box>
             </Container>
         </Box>

@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\formulariousuario.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|solutionrelative:src\\formulariousuario.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\listausuarios.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|solutionrelative:src\\listausuarios.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|solutionrelative:src\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|solutionrelative:src\\sidebar.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|solutionrelative:src\\app.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\sidebar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|solutionrelative:src\\sidebar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B907B27-A5CA-1E97-EDD7-D2CF3F5119D9}|frontcadastrowebapi.esproj|d:\\backup\\estudos\\frontcadastrowebapi\\src\\login.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,64 +34,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Sidebar.css",
+              "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\Sidebar.css",
+              "RelativeDocumentMoniker": "src\\Sidebar.css",
+              "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\Sidebar.css",
+              "RelativeToolTip": "src\\Sidebar.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAF4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-27T00:32:09.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormularioUsuario.tsx",
-              "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\FormularioUsuario.tsx",
-              "RelativeDocumentMoniker": "src\\FormularioUsuario.tsx",
-              "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\FormularioUsuario.tsx",
-              "RelativeToolTip": "src\\FormularioUsuario.tsx",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAAwLkAAAAwAAAAAAAAAA==",
+              "Title": "Sidebar.tsx",
+              "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\Sidebar.tsx",
+              "RelativeDocumentMoniker": "src\\Sidebar.tsx",
+              "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\Sidebar.tsx",
+              "RelativeToolTip": "src\\Sidebar.tsx",
+              "ViewState": "AgIAAAoAAAAAAAAAAADgvyUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-25T19:01:52.536Z",
+              "WhenOpened": "2026-02-27T00:16:53.501Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ListaUsuarios.tsx",
-              "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\ListaUsuarios.tsx",
-              "RelativeDocumentMoniker": "src\\ListaUsuarios.tsx",
-              "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\ListaUsuarios.tsx",
-              "RelativeToolTip": "src\\ListaUsuarios.tsx",
-              "ViewState": "AgIAADgAAAAAAAAAAADgvzQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-23T20:33:20.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "api.ts",
-              "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\api.ts",
-              "RelativeDocumentMoniker": "src\\api.ts",
-              "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\api.ts",
-              "RelativeToolTip": "src\\api.ts",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-23T18:58:29.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "App.tsx",
               "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\App.tsx",
               "RelativeDocumentMoniker": "src\\App.tsx",
               "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\App.tsx",
               "RelativeToolTip": "src\\App.tsx",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-06-17T23:59:51.386Z"
+              "WhenOpened": "2025-06-17T23:59:51.386Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Login.tsx",
               "DocumentMoniker": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\Login.tsx",
               "RelativeDocumentMoniker": "src\\Login.tsx",
               "ToolTip": "D:\\Backup\\Estudos\\FrontCadastroWebAPI\\src\\Login.tsx",
               "RelativeToolTip": "src\\Login.tsx",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAF4AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-06-17T23:11:45.341Z"
+              "WhenOpened": "2025-06-17T23:11:45.341Z",
+              "EditorCaption": ""
             }
           ]
         }

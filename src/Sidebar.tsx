@@ -1,11 +1,18 @@
 ﻿import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import "./Sidebar.css";
 
 const Sidebar: React.FC = () => {
     const location = useLocation();
-    const [aberto, setAberto] = useState(true);
+    const navigate = useNavigate();
+    const [aberto, setAberto] = useState(true)
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        navigate('/login');
+    };  
+    
 
     return (
         <nav className={`sidebar${aberto ? "" : " sidebar-fechado"}`}>
@@ -26,6 +33,13 @@ const Sidebar: React.FC = () => {
                 <Link to="/sobre" className={location.pathname === "/sobre" ? "active" : ""}>
                     {aberto ? "Sobre" : <span title="Sobre">ℹ️</span>}
                 </Link>
+                <button
+                    className="sidebar-link"
+                    type="button"
+                    onClick={handleLogout}
+                >
+                    {aberto ? "Sair" : <span title="Sair">🚪</span>}
+                </button>
             </div>
         </nav>
     );
