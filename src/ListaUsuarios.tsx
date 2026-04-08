@@ -69,15 +69,6 @@ const ListaUsuarios: React.FC = () => {
                 if (err instanceof Error) alert("Erro ao deletar usuário: " + err.message);
                 else alert("Erro desconhecido ao deletar usuário.");
             }
-            //fetch(`http://localhost:5180/api/usuarios/${id}`, {
-            //    method: "DELETE"
-            //}).then(res => {
-            //    if (res.ok) {
-            //        setUsuarios(usuarios.filter(u => u.id !== id));
-            //    } else {
-            //        alert("Erro ao deletar usuário.");
-            //    }
-            //});
         }
     };
 
